@@ -23,7 +23,7 @@ body{
     background-color: #293447;
 }
 
-.game.details{
+.game-details{
     color: #b8c6dc;
     font-size: 1.2rem;
     font-weight: 500;
@@ -40,3 +40,4 @@ body{
     display: grid;
     grid-template: repeat(30, 1fr) / repeat(30, 1fr);
 }
+

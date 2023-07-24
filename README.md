@@ -58,3 +58,10 @@ Safari
 
 ## Acknowledgments
 The game is inspired by the classic Snake game and is built for educational purposes.
+
+
+## Backlog 
+
+1- create animation open close mouth
+2 - add styles
+3 - create laser
