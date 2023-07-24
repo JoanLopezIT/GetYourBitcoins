@@ -5,7 +5,7 @@ This is a classic Snake game implemented in JavaScript using object-oriented pro
 
 ## How to Play
 
-Use de direct link provided in GitHub or in this Readme file
+Use de direct link provided in GitHub or in this Readme file.
 
 Use the arrow keys (up, down, left, right) to control the snake's direction.
 
