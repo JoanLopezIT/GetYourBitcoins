@@ -39,5 +39,8 @@ body{
     background-image: url("./snake_images/desktop-wallpaper-snake-game-cool-green-gaming.png");
     display: grid;
     grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    position: relative;
 }
+
+
 

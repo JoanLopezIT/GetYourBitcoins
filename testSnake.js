@@ -34,16 +34,16 @@ class Snake {
     moveSnake() {
         switch (this.direction) {
             case "up":
-                this.snake.style.top = `${(parseInt(this.snake.style.top) - this.gridSize + 600) % 600}px`;
+                this.snake.style.top = `${(parseInt(this.snake.style.top) - this.gridSize + 390) % 390}px`;
                 break;
             case "down":
-                this.snake.style.top = `${(parseInt(this.snake.style.top) + this.gridSize) % 600}px`;
+                this.snake.style.top = `${(parseInt(this.snake.style.top) + this.gridSize) % 390}px`;
                 break;
             case "left":
-                this.snake.style.left = `${(parseInt(this.snake.style.left) - this.gridSize + 600) % 600}px`;
+                this.snake.style.left = `${(parseInt(this.snake.style.left) - this.gridSize + 390) % 390}px`;
                 break;
             case "right":
-                this.snake.style.left = `${(parseInt(this.snake.style.left) + this.gridSize) % 600}px`;
+                this.snake.style.left = `${(parseInt(this.snake.style.left) + this.gridSize) % 390}px`;
                 break;
             default:
                 break;
@@ -59,7 +59,6 @@ class Snake {
     }
 }
 
-const snakeInstance = new Snake()
 
 
 function playerMove(keyPressed) {
