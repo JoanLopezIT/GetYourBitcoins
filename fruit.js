@@ -7,33 +7,33 @@ class Fruit {
       this.interval = setInterval(() => {
         this.removeFruit();
         this.createFruit();
-      }, 9000);
+      }, 60000);
     }
   
     createFruit() {
-      this.fruit = document.createElement("div");
-      this.fruit.className = "fruitClass";
+      this.reward = document.createElement("div");
+      this.reward.className = "fruitClass";
   
-      this.fruit.style.position = "absolute";
-      this.fruit.style.width = "30px";
-      this.fruit.style.height = "30px";
-      this.fruit.style.borderRadius = "50%";
-      this.fruit.style.backgroundColor = "blue";
+      this.reward.style.position = "absolute";
+      this.reward.style.width = "30px";
+      this.reward.style.height = "30px";
+      this.reward.style.borderRadius = "50%";
+      this.reward.style.backgroundImage = "url('./snake_images/Bitcoin.png')";
 
       const maxX = this.scenario.clientWidth - 30; // Ancho del escenario - ancho de la fruta
       const maxY = this.scenario.clientHeight - 30; // Alto del escenario - alto de la fruta
       const randomX = Math.random() * maxX;
       const randomY = Math.random() * maxY;
   
-      this.fruit.style.left = randomX + "px";
-      this.fruit.style.top = randomY + "px";
+      this.reward.style.left = randomX + "px";
+      this.reward.style.top = randomY + "px";
   
-      this.scenario.appendChild(this.fruit);
+      this.scenario.appendChild(this.reward);
     }
   
     removeFruit() {
-      if (this.fruit && this.fruit.parentNode) {
-        this.fruit.parentNode.removeChild(this.fruit);
+      if (this.reward && this.reward.parentNode) {
+        this.reward.parentNode.removeChild(this.reward);
       }
     }
   }
