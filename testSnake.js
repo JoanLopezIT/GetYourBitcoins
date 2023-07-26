@@ -59,40 +59,6 @@ class Snake {
     }
 }
 
-
-
-function playerMove(keyPressed) {
-    let currentDirection = snakeInstance.direction
-
-    switch (keyPressed) {
-        case "ArrowUp":
-            if (currentDirection !== "up" && currentDirection !== "down") {
-                snakeInstance.setDirection("up");
-                console.log("Go UP")
-            }
-            break;
-        case "ArrowDown":
-            if (currentDirection !== "up" && currentDirection !== "down") {
-                snakeInstance.setDirection("down");
-                console.log("Go DOWN")
-            }
-            break;
-        case "ArrowRight":
-            if (currentDirection !== "left" && currentDirection !== "right") {
-                snakeInstance.setDirection("right");
-                console.log("Go RIGHT")
-            }
-            break;
-        case "ArrowLeft":
-            if (currentDirection !== "left" && currentDirection !== "right") {
-                snakeInstance.setDirection("left");
-                console.log("Go LEFT")
-            }
-            break;
-    }
-}
-
-
 // Event listener
 document.addEventListener("keydown", (event) => {
     event.preventDefault();

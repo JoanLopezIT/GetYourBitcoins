@@ -16,7 +16,7 @@ body{
 .wrapper {
     width: 65vmin;
     height: 70vmin;
-    display: flex;
+    display: none;
     flex-direction: column;
     border-radius: 5px;
     overflow: hidden;
@@ -45,12 +45,12 @@ body{
 #initial-screen{
     width: 90vmin;
     height: 90vmin;
-    display: none;
+    display: block;
     position: absolute
     
 }
 
-#btn{
+#start-button{
     width: 20vmin;
     height: 7vmin;
     background-color: #0B45EC;  
