@@ -60,15 +60,16 @@ body{
     font-size: 1.2rem;
     text-transform: uppercase;
     position: absolute;
-    left: 50%;
+    left: 40%;
+    top: 70%;
     border: 2px solid black;
 
 }
 
-.startScore{
+#startScore{
     width: 22vmin;
-    height: 5vmin;
-    background-color: #0B45EC;  
+    height: 8vmin;
+    background-color: #F0E018;  
     border: 2px solid black;
     border-radius: 5%;
     font-weight: bold;

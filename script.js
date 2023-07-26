@@ -31,9 +31,11 @@ const scenario = document.querySelector(".scenario")
 // score and High score programing
 let scoreElement = document.querySelector(".score");
 let highScoreElement = document.querySelector(".high-score");
+let highScoreInitialScreen = document.querySelector("#startScore")
 let score = 0;
 let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerHTML = `High Score : ${highScore}`
+highScoreInitialScreen.innerHTML = `High Score : ${highScore}`
 
 // let snakeBody = [];
 // snakeBody[0] = [snakeX, snakeY]
@@ -67,7 +69,7 @@ function collissionDetection() {
         fruit.createFruit()
 
         // score manager
-        score++
+        score+= 100
         scoreElement.innerHTML = `Score : ${score}`
         highScore = score >= highScore ? score : highScore;
         localStorage.setItem("high-score", highScore)
@@ -96,7 +98,7 @@ function collissionDetection() {
         venom.createVenomousFruit()
 
         // score manager
-        score--
+        score-=50
         scoreElement.innerHTML = `Score : ${score}`
         highScore = score >= highScore ? score : highScore;
         localStorage.setItem("high-score", highScore)
