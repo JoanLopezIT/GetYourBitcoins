@@ -1,14 +1,18 @@
 const fruit = new Fruit();
 const snake = new Snake();
+
+const scenario = document.querySelector(".scenario")
+
+// score and High score programing
 let scoreElement = document.querySelector(".score");
 let highScoreElement = document.querySelector(".high-score");
-
 let score = 0;
 let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerHTML = `High Score : ${highScore}`
 
 
 let snakeBody = [];
+let newElement = ``
 
 
 
@@ -38,12 +42,26 @@ function collissionDetection() {
         // Remove the fruit from the DOM and add a new one
         fruit.reward.remove();
         fruit.createFruit()
-         score ++
+
+        snakeBody[0] = [snakeX, snakeY]
+
+for(let i = 0; i < snakeBody.length; i++ ){
+    if(distance < minDistance){
+        newElement.innerHTML = `<div class="head" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>` ;
+        scenario.appendChild(newElement);
+        console.log("SE COMIO LA FRUTA")
+    }
+
+}
+
+        // score manager
+        score ++
          scoreElement.innerHTML = `Score : ${score}`
          highScore = score >= highScore ? score : highScore;
          localStorage.setItem("high-score",highScore)
          highScoreElement.innerHTML = `High Score : ${highScore}`
          snakeBody.push([fruitX,fruitY])
+
 
     }
 }
@@ -60,8 +78,14 @@ gameLoop()
 snakeBody[0] = [snakeX, snakeY]
 
 for(let i = 0; i < snakeBody.length; i++ ){
-    htmlMarkup += `<div class="head" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`;
+    if(distance < minDistance){
+        newElement = document.innerHTML(`<div class="head" style="grid-area: ${snakeBody[i][1]} / ${snakeBody[i][0]}"></div>`) ;
+        scenario.appendChild(newElement);
+        console.log("SE COMIO LA FRUTA")
+    }
+
 }
+
 
 // Player Movement direction
 

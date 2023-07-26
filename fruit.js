@@ -7,7 +7,7 @@ class Fruit {
       this.interval = setInterval(() => {
         this.removeFruit();
         this.createFruit();
-      }, 60000);
+      }, 90000);
     }
   
     createFruit() {

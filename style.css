@@ -42,5 +42,37 @@ body{
     position: relative;
 }
 
+#initial-screen{
+    width: 90vmin;
+    height: 90vmin;
+    display: none;
+    position: absolute
+    
+}
+
+#btn{
+    width: 20vmin;
+    height: 7vmin;
+    background-color: #0B45EC;  
+    font-family: fantasy;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    border: 2px solid black;
+
+}
+
+.startScore{
+    width: 22vmin;
+    height: 5vmin;
+    background-color: #0B45EC;  
+    border: 2px solid black;
+    border-radius: 5%;
+    font-weight: bold;
+}
+
+
+
 
 
