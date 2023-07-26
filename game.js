@@ -17,9 +17,11 @@ class Game {
         // start the game loop
         // this.gameLoop()
     }
-    // gameOver {
-    //     setTimeout(() => {
-    //         console.log('first timeout')
-    //     }, 10000);
-    // }
+    gameOver {
+        setTimeout(() => {
+            this.startGameScenario.style.display = "block";
+            this.wrapper.style.display = "none";
+
+        }, 5000);
+    }
 }
