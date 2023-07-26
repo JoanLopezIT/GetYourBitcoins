@@ -32,7 +32,7 @@ class VenomousFruit {
         this.poison.style.width = "30px";
         this.poison.style.height = "30px";
         this.poison.style.borderRadius = "50%";
-        this.poison.style.backgroundImage = "url('./snake_images/euro.png')";
+        this.poison.style.backgroundImage = "url('./snake_images/euro.gif')";
 
         // ORIGINAL
         const maxX = this.scenario.clientWidth - 90; // Ancho del escenario - ancho de la fruta

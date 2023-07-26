@@ -32,7 +32,7 @@ class Fruit {
     this.reward.style.width = "30px";
     this.reward.style.height = "30px";
     this.reward.style.borderRadius = "50%";
-    this.reward.style.backgroundImage = "url('./snake_images/Bitcoin.png')";
+    this.reward.style.backgroundImage = "url('./snake_images/BitcoinGif.gif')";
 
     // ORIGINAL
     const maxX = this.scenario.clientWidth - 90; // Ancho del escenario - ancho de la fruta

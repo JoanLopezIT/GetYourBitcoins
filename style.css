@@ -11,6 +11,7 @@ body{
     justify-content: center;
     min-height: 100vh;
     background: #e3f2fd;
+    background-image: url(./snake_images/bakgrownBody.jpg);
 }
 
 .wrapper {
@@ -21,6 +22,7 @@ body{
     border-radius: 5px;
     overflow: hidden;
     background-color: #293447;
+
 }
 
 .game-details{
@@ -43,7 +45,7 @@ body{
 }
 
 #initial-screen{
-    width: 90vmin;
+    width: 140vmin;
     height: 90vmin;
     display: block;
     position: absolute
@@ -51,9 +53,9 @@ body{
 }
 
 #start-button{
-    width: 20vmin;
+    width: 22vmin;
     height: 7vmin;
-    background-color: #0B45EC;  
+    background-color: #F0E018;  
     font-family: fantasy;
     font-size: 1.2rem;
     text-transform: uppercase;

@@ -6,6 +6,12 @@ window.onload = function () {
     startButton.addEventListener("click", function () {
         console.log('START BUTTON IS WORKING');
         startGame();
+        setTimeout(() => {
+            console.log("IT HAPPENDS")
+            game = new Game();
+            game.gameOver()
+        }, 60000);  
+
     });
 
     function startGame() {
@@ -13,6 +19,7 @@ window.onload = function () {
         game = new Game();
         game.start();
     }
+ 
 }
 
 const fruit = new Fruit();
@@ -129,24 +136,31 @@ function playerMove(keyPressed) {
             if (currentDirection !== "up" && currentDirection !== "down") {
                 snake.setDirection("up");
                 console.log("Go UP")
+                snake.player.style.backgroundImage = "url('./snake_images/pacmanUp.gif')";
             }
             break;
         case "ArrowDown":
             if (currentDirection !== "up" && currentDirection !== "down") {
                 snake.setDirection("down");
                 console.log("Go DOWN")
+                snake.player.style.backgroundImage = "url('./snake_images/pacmanBot.gif')";
+
             }
             break;
         case "ArrowRight":
             if (currentDirection !== "left" && currentDirection !== "right") {
                 snake.setDirection("right");
                 console.log("Go RIGHT")
+                snake.player.style.backgroundImage = "url('./snake_images/pacmanRight.gif')";
+
             }
             break;
         case "ArrowLeft":
             if (currentDirection !== "left" && currentDirection !== "right") {
                 snake.setDirection("left");
                 console.log("Go LEFT")
+                snake.player.style.backgroundImage = "url('./snake_images/pacmanLeft.gif')";
+
             }
             break;
         case "p":

@@ -13,10 +13,12 @@ class Snake {
         this.player.style.position = "absolute";
 
         // Styling player
-        this.player.style.width = "2fr";
-        this.player.style.height = "2fr";
+        this.player.style.width = "30px";
+        this.player.style.height = "30px";
         this.player.style.borderRadius = "50%";
         this.player.style.backgroundColor = "brown";
+        this.player.style.backgroundImage = "url('./snake_images/pacmanRight.gif')";
+
 
         // Add player to Scenario
         this.scenario.appendChild(this.player)
@@ -58,40 +60,6 @@ class Snake {
         this.direction = direction;
     }
 }
-
-
-
-function playerMove(keyPressed) {
-    let currentDirection = snakeInstance.direction
-
-    switch (keyPressed) {
-        case "ArrowUp":
-            if (currentDirection !== "up" && currentDirection !== "down") {
-                snakeInstance.setDirection("up");
-                console.log("Go UP")
-            }
-            break;
-        case "ArrowDown":
-            if (currentDirection !== "up" && currentDirection !== "down") {
-                snakeInstance.setDirection("down");
-                console.log("Go DOWN")
-            }
-            break;
-        case "ArrowRight":
-            if (currentDirection !== "left" && currentDirection !== "right") {
-                snakeInstance.setDirection("right");
-                console.log("Go RIGHT")
-            }
-            break;
-        case "ArrowLeft":
-            if (currentDirection !== "left" && currentDirection !== "right") {
-                snakeInstance.setDirection("left");
-                console.log("Go LEFT")
-            }
-            break;
-    }
-}
-
 
 // Event listener
 document.addEventListener("keydown", (event) => {

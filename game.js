@@ -4,7 +4,7 @@ class Game {
         this.score = 0;
         this.wrapper = document.querySelector(".wrapper");
         this.startGameScenario = document.querySelector("#initial-screen")
-        this.gameIsOver = false;
+        // this.gameIsOver = false;
     }
 
     start() {
@@ -17,11 +17,9 @@ class Game {
         // start the game loop
         // this.gameLoop()
     }
-    gameOver {
-        setTimeout(() => {
-            this.startGameScenario.style.display = "block";
-            this.wrapper.style.display = "none";
+    gameOver() {
 
-        }, 5000);
+        this.startGameScenario.style.display = "block";
+        this.wrapper.style.display = "none";
     }
 }
