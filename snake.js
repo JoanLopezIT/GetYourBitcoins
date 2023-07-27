@@ -36,18 +36,20 @@ class Snake {
 
     // Function to move the player constantly
     moveSnake() {
+        let scenarioWidth = this.scenario.offsetWidth
+        let scenarioHeight = this.scenario.offsetHeight
         switch (this.direction) {
             case "up":
-                this.player.style.top = `${(parseInt(this.player.style.top) - this.gridSize + 390) % 390}px`;
+                this.player.style.top = `${(parseInt(this.player.style.top) - this.gridSize + scenarioHeight) % scenarioHeight}px`;
                 break;
             case "down":
-                this.player.style.top = `${(parseInt(this.player.style.top) + this.gridSize) % 390}px`;
+                this.player.style.top = `${(parseInt(this.player.style.top) + this.gridSize) % scenarioHeight}px`;
                 break;
             case "left":
-                this.player.style.left = `${(parseInt(this.player.style.left) - this.gridSize + 390) % 390}px`;
+                this.player.style.left = `${(parseInt(this.player.style.left) - this.gridSize + scenarioWidth) % scenarioWidth}px`;
                 break;
             case "right":
-                this.player.style.left = `${(parseInt(this.player.style.left) + this.gridSize) % 390}px`;
+                this.player.style.left = `${(parseInt(this.player.style.left) + this.gridSize) % scenarioWidth}px`;
                 break;
             default:
                 break;
