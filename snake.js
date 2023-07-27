@@ -28,7 +28,7 @@ class Snake {
         // Give player a direction
         this.direction = "right"; // Initial direction of the player
         this.gridSize = 30; // Grid size (number of pixels per cell)
-        this.movementSpeed = 300; // player movement speed in milliseconds (lower value = faster movement)
+        this.movementSpeed = 150; // player movement speed in milliseconds (lower value = faster movement)
 
         // Call the moveSnake function to start the constant movement
         this.moveSnake();

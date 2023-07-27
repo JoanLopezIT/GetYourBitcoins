@@ -18,7 +18,7 @@ class Fruit {
       console.log('reposition fruit')
       this.removeFruit();
       this.createFruit();
-    }, 9000);
+    }, 8000);
   }
 
   // Function to create a new fruit

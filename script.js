@@ -76,6 +76,7 @@ function collissionDetection() {
         highScoreElement.innerHTML = `High Score : ${highScore}`
         const bitcoinSound = new Audio('./snake_images/BitcoinSound.wav');
         bitcoinSound.play()
+        
 
         //          snakeBody.push([fruitX,fruitY])
 
