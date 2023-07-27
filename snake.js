@@ -7,6 +7,9 @@ class Snake {
         this.player = document.createElement("div");
         this.player.className = "snakeClass";
 
+        // Add player to Scenario
+        this.scenario.appendChild(this.player)
+
         // Set initial position of the player
         this.player.style.top = 0;
         this.player.style.left = 0;
@@ -20,8 +23,7 @@ class Snake {
         this.player.style.backgroundImage = "url('./snake_images/pacmanRight.gif')";
 
 
-        // Add player to Scenario
-        this.scenario.appendChild(this.player)
+
 
         // Give player a direction
         this.direction = "right"; // Initial direction of the player

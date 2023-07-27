@@ -37,8 +37,6 @@ let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerHTML = `High Score : ${highScore}`
 highScoreInitialScreen.innerHTML = `High Score : ${highScore}`
 
-// sound setting
-
 // let snakeBody = [];
 // snakeBody[0] = [snakeX, snakeY]
 
