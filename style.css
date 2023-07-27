@@ -45,35 +45,49 @@ body{
 }
 
 #initial-screen{
-    width: 140vmin;
-    height: 90vmin;
-    display: block;
-    position: absolute
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
     
 }
+
 
 #start-button{
     width: 22vmin;
     height: 7vmin;
-    background-color: #F0E018;  
+    background-color: #F0E018;
     font-family: fantasy;
     font-size: 1.2rem;
     text-transform: uppercase;
-    position: absolute;
-    left: 40%;
-    top: 70%;
     border: 2px solid black;
-
+    border-radius: 15%;
 }
+
 
 #startScore{
     width: 22vmin;
-    height: 8vmin;
-    background-color: #F0E018;  
+    height: 10vmin;
+    background-color: #F0E018;
     border: 2px solid black;
-    border-radius: 5%;
+    border-radius: 15%;
     font-weight: bold;
+    text-align: center;
+    padding-top: 0.6rem;
 }
+
+.screenButtons{
+    position: relative;
+    text-align: center; 
+    display: flex;
+    justify-content: space-between ;
+    width: 100%;
+
+ }
+
+ #transparentDiv{
+    width: 22vmin;
+ }
 
 
 

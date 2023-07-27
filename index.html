@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Cyber Snake</title>
+    <title>Getyourbitcoins</title>
 </head>
 <body>
     <div id="initial-screen">
-        <img id="startImage" src="./snake_images/Getyourbitcoins.png" alt="backgroundImage">
-        <button id="start-button">START</button>
-        <div id="startScore">Higher Score: 0</div>
+        <div id="startImage">
+            <img src="./snake_images/Getyourbitcoins.png" alt="backgroundImage">
+        </div>
+
+        <div class="screenButtons">
+            <div id="startScore">Higher Score: 0</div>
+            <button id="start-button">START</button>
+            <div id="transparentDiv"></div>
+        </div>
     </div>
 
     <div class="wrapper">
@@ -25,12 +31,8 @@
 
 <script src="fruit.js"></script>
 <script src="venom.js"></script>
-
 <script src="snake.js"></script>
-<!-- <script src="testSnake.js"></script> -->
-
 <script src="script.js"></script>
-
 <script src="game.js"></script>
 </body>
 </html>

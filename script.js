@@ -37,6 +37,8 @@ let highScore = localStorage.getItem("high-score") || 0;
 highScoreElement.innerHTML = `High Score : ${highScore}`
 highScoreInitialScreen.innerHTML = `High Score : ${highScore}`
 
+// sound setting
+
 // let snakeBody = [];
 // snakeBody[0] = [snakeX, snakeY]
 
@@ -74,6 +76,8 @@ function collissionDetection() {
         highScore = score >= highScore ? score : highScore;
         localStorage.setItem("high-score", highScore)
         highScoreElement.innerHTML = `High Score : ${highScore}`
+        const bitcoinSound = new Audio('./snake_images/BitcoinSound.wav');
+        bitcoinSound.play()
 
         //          snakeBody.push([fruitX,fruitY])
 
@@ -103,6 +107,8 @@ function collissionDetection() {
         highScore = score >= highScore ? score : highScore;
         localStorage.setItem("high-score", highScore)
         highScoreElement.innerHTML = `High Score : ${highScore}`
+        const euroSound = new Audio('./snake_images/euroSound.wav');
+        euroSound.play()
     }
 }
 
