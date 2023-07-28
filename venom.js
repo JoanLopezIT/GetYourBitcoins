@@ -18,6 +18,9 @@ class VenomousFruit {
             console.log('reposition venomousfruit')
             this.removeVenomousFruit();
             this.createVenomousFruit();
+            this.createVenomousFruit();
+
+
         }, 8000);
     }
 

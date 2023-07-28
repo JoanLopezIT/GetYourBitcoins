@@ -76,6 +76,7 @@ function collissionDetection() {
         highScoreElement.innerHTML = `High Score : ${highScore}`
         const bitcoinSound = new Audio('./snake_images/BitcoinSound.wav');
         bitcoinSound.play()
+    }
         
 
         //          snakeBody.push([fruitX,fruitY])
@@ -94,22 +95,43 @@ function collissionDetection() {
         //          }
         //  snakeBody[0] = [snakeX, snakeY]
 
-    } else if (distanceVenom < minDistanceVenom) {
-        console.log('Venom Collision detected!');
-        // Remove the venom from the DOM and add a new one
-        venom.poison.remove();
-        venom.createVenomousFruit()
+   
+    const venomousFruits = document.querySelectorAll(".venomousFruitClass");
+    console.log(venomousFruits)
 
-        // score manager
-        score-=50
-        scoreElement.innerHTML = `Score : ${score}`
-        highScore = score >= highScore ? score : highScore;
-        localStorage.setItem("high-score", highScore)
-        highScoreElement.innerHTML = `High Score : ${highScore}`
-        const euroSound = new Audio('./snake_images/euroSound.wav');
-        euroSound.play()
-    }
+        venomousFruits.forEach((venomousFruit) => {
+            // Calculate the center coordinates of the venomous fruit circle
+            const venomousFruitX = venomousFruit.offsetLeft + venomousFruit.offsetWidth / 2;
+            const venomousFruitY = venomousFruit.offsetTop + venomousFruit.offsetHeight / 2;
+    
+            // Calculate the distance between the snake's head and the venomous fruit
+            const distanceVenomousFruit = Math.sqrt((snakeX - venomousFruitX) ** 2 + (snakeY - venomousFruitY) ** 2);
+    
+            // Calculate the minimum distance needed for a collision (sum of the radii)
+            const minDistanceVenomousFruit = snake.player.offsetWidth / 2 + venomousFruit.offsetWidth / 2;
+    
+            // If the distance is less than the minimum distance, a collision is detected
+             if (distanceVenomousFruit < minDistanceVenomousFruit) {
+                console.log('VenomousFruit Collision detected!');
+                // Remove the venomous fruit from the DOM and add a new one
+                venomousFruit.remove();
+                venom.createVenomousFruit();
+    
+                // score manager
+                score -= 50;
+                scoreElement.innerHTML = `Score : ${score}`;
+                highScore = score >= highScore ? score : highScore;
+                localStorage.setItem("high-score", highScore);
+                highScoreElement.innerHTML = `High Score : ${highScore}`;
+                const euroSound = new Audio('./snake_images/euroSound.wav');
+                euroSound.play();
+            }
+        });
+
+    
 }
+
+
 
 
 // loop for colision detection
