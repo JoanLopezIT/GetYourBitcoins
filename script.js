@@ -152,7 +152,7 @@ gameLoop()
 //     }
 //     scenario.innerHTML = newElement
 
-// }
+// comments}
 
 
 // Player Movement direction
